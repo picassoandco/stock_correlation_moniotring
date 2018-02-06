@@ -1,6 +1,6 @@
 # stock_correlation_moniotring
 ## 다음을 숙지해주세요
-### GIt 규칙
+### Git 규칙
 [해당 템플릿](https://gist.github.com/adeekshith/cd4c95a064977cdc6c50)을 따라서 작성합니다.
 
 커밋은 "영어"로 작성합니다
