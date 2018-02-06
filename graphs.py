@@ -13,6 +13,8 @@ def plot_graph(name,x_value,y_value):
     plt.legend(loc=2, fontsize=10)
     plt.plot()
     plt.show()
+    
+    fig.savefig("graphimages/"+name+".png")
 
 def main():
     startdate=[]
