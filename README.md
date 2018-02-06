@@ -15,3 +15,4 @@ type: feat, fix, refactor, style.....
 
 단 identation은 tap을 사용합니다.
 
+## 나도 repository 제목에 오타난거 압니다.
