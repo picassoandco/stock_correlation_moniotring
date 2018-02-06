@@ -1,6 +1,18 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import dates
+import datetime
+
+def plot_graph(name,x_value,y_value):
+    fig = plt.figure()
+    plt.title(name)
+    ax1 = fig.add_subplot(111)
+    ax1.plot(x_value, y_value)
+    plt.xticks(rotation=30)
+    plt.legend(loc=2, fontsize=10)
+    plt.plot()
+    plt.show()
 
 def main():
     startdate=[]
@@ -44,20 +56,31 @@ def main():
     print("done")
     print(startdate)
     print(kospiindex)
+    converted_dates=[]
 
-    fig=plt.figure()
-    plt.title("kospi index")
-    ax1=fig.add_subplot(111)
-    ax1.plot(startdate,kospiindex)
-    plt.plot()
-    plt.show()
+    for date in startdate:
+        converted_dates.append(datetime.datetime.strptime(date,"%Y-%m-%d"))
 
-    fig = plt.figure()
-    plt.title("spx index")
-    ax1 = fig.add_subplot(111)
-    ax1.plot(startdate, spxindex)
-    plt.plot()
-    plt.show()
+    # 행동이 3번 이상 반복이 된다면 함수로 만들어야한다
+    plot_graph("kospi index",converted_dates,kospiindex)
+    plot_graph("spxindex",converted_dates,spxindex)
+    plot_graph("ccmpindex", converted_dates, ccmpindex)
+    plot_graph("bbdxyindex", converted_dates, bbdxyindex)
+    plot_graph("koacurncy", converted_dates, koacurncy)
+    plot_graph("cl1comdty", converted_dates, cl1comdty)
+    plot_graph("bdiyindex", converted_dates, bdiyindex)
+    plot_graph("soxindex", converted_dates, soxindex)
+    plot_graph("xauindex", converted_dates, xauindex)
+    plot_graph("rbtacomdty", converted_dates, rbtacomdty)
+    plot_graph("gvsk10yr", converted_dates, gvsk10yr)
+    plot_graph("usggindex", converted_dates, usggindex)
+    plot_graph("gtdem10", converted_dates, gtdem10)
+    plot_graph("fdfd", converted_dates, fdfd)
+    plot_graph("vkospu", converted_dates, vkospu)
+    plot_graph("visindex", converted_dates, visindex)
 
+
+#   항상 함수화를 시켜서 프로그램을 짜자
+#   단순 명령어라도 def main()에 저장을 하고 if__name__으로 실행을 시키자
 if __name__=="__main__":
     main()
