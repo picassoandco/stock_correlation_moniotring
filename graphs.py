@@ -58,6 +58,7 @@ def main():
     print(kospiindex)
     converted_dates=[]
 
+    # matplot에서 날짜를 자료형으로 지정을 해줘야한다.
     for date in startdate:
         converted_dates.append(datetime.datetime.strptime(date,"%Y-%m-%d"))
 
