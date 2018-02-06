@@ -5,7 +5,9 @@
 
 커밋은 "영어"로 작성합니다
 
-<type>:(If applied, this commit will...) <subject> (Max 50 character)
+type:(If applied, this commit will...) Subject (Max 50 character)
+
+type: feat, fix, refactor, style.....
 
 ### Python Style Guide
 
