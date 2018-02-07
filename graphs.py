@@ -5,16 +5,18 @@ from matplotlib import dates
 import datetime
 
 def plot_graph(name,x_value,y_value):
+    converted_y_value = list(filter(lambda y:y>0, y_value))
+    converted_x_value = x_value[len(y_value) - len(converted_y_value):]
     fig = plt.figure()
     plt.title(name)
     ax1 = fig.add_subplot(111)
-    ax1.plot(x_value, y_value)
+    ax1.plot(converted_x_value, converted_y_value)
     plt.xticks(rotation=30)
     plt.legend(loc=2, fontsize=10)
     plt.plot()
     plt.show()
 
-    fig.savefig("graphimages/"+name+".png")
+    fig.savefig("calibrated_images/"+name+".png")
 
 def main():
     startdate=[]

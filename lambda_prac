@@ -1,0 +1,8 @@
+import os
+import sys
+
+x_list = [1,2,3,-3,-1,0]
+
+x_value = [lambda x:x>0, x_list]
+
+print(x_value)
